@@ -1,8 +1,8 @@
-import { cn } from "../../lib/utils";
-import React, { useRef, useState } from "react";
-import { motion } from "motion/react";
-import { IconUpload } from "@tabler/icons-react";
-import { useDropzone } from "react-dropzone";
+import { cn } from "@/lib/utils"
+import React, { useRef, useState } from "react"
+import { motion } from "motion/react"
+import { IconUpload } from "@tabler/icons-react"
+import { useDropzone } from "react-dropzone"
 
 const mainVariant = {
   initial: {
@@ -14,7 +14,7 @@ const mainVariant = {
     y: -20,
     opacity: 0.9,
   },
-};
+}
 
 const secondaryVariant = {
   initial: {
@@ -23,33 +23,29 @@ const secondaryVariant = {
   animate: {
     opacity: 1,
   },
-};
+}
 
-export const FileUpload = ({
-  onChange,
-}: {
-  onChange?: (files: File[]) => void;
-}) => {
-  const [files, setFiles] = useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+export const FileUpload = ({ onChange }: { onChange?: (files: File[]) => void }) => {
+  const [files, setFiles] = useState<File[]>([])
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const handleFileChange = (newFiles: File[]) => {
-    setFiles((prevFiles) => [...prevFiles, ...newFiles]);
-    onChange && onChange(newFiles);
-  };
+    setFiles((prevFiles) => [...prevFiles, ...newFiles])
+    onChange && onChange(newFiles)
+  }
 
   const handleClick = () => {
-    fileInputRef.current?.click();
-  };
+    fileInputRef.current?.click()
+  }
 
   const { getRootProps, isDragActive } = useDropzone({
     multiple: false,
     noClick: true,
     onDrop: handleFileChange,
     onDropRejected: (error) => {
-      console.log(error);
+      console.log(error)
     },
-  });
+  })
 
   return (
     <div className="w-full" {...getRootProps()}>
@@ -165,17 +161,17 @@ export const FileUpload = ({
         </div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 export function GridPattern() {
-  const columns = 41;
-  const rows = 11;
+  const columns = 41
+  const rows = 11
   return (
     <div className="flex bg-gray-100 dark:bg-neutral-900 shrink-0 flex-wrap justify-center items-center gap-x-px gap-y-px  scale-105">
       {Array.from({ length: rows }).map((_, row) =>
         Array.from({ length: columns }).map((_, col) => {
-          const index = row * columns + col;
+          const index = row * columns + col
           return (
             <div
               key={`${col}-${row}`}
@@ -185,9 +181,9 @@ export function GridPattern() {
                   : "bg-gray-50 dark:bg-neutral-950 shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] dark:shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]"
               }`}
             />
-          );
+          )
         })
       )}
     </div>
-  );
+  )
 }

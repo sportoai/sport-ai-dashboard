@@ -13,19 +13,19 @@ import { AnimatedPinDemo } from '@/Components/ui/AnimatedPinDemo'
 //   MobileNavToggle,
 //   MobileNavMenu,
 // } from "@/components/ui/resizable-navbar"
-import { NavMenu } from '@/Components/ui/Navbar'
+// import { NavMenu } from '@/Components/ui/Navbar'
 import { SidebarDemo } from '@/Components/ui/Sidebardemo'
 
 const Dashboard = () => {
   return (
-    <>
-     {/* <div className="bg-[#000000] w-full h-[100vh]"> */}
+    <div>
+      {/* <div className="bg-[#000000] w-full h-[100vh]"> */}
       {/* <NavMenu /> */}
       <BackgroundBeams />
-      <SidebarDemo  />
-      
-    {/* </div> */}
-    </>
+      <SidebarDemo />
+
+      {/* </div> */}
+    </div>
   )
 }
 
