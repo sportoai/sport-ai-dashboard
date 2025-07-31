@@ -122,3 +122,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Sports Analytics Styles */
+@layer components {
+  .sports-card {
+    @apply transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .analytics-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #000000 50%, #1a1a1a 75%, #000000 100%);
+  }
+  
+  .performance-metric {
+    @apply bg-gradient-to-br from-gray-800 via-gray-900 to-black;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
