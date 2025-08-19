@@ -1,4 +1,4 @@
-import { Heading, Stack, Text, VStack, HStack } from "@chakra-ui/react"
+import { Heading, Text, VStack, HStack, Box, Badge } from "@chakra-ui/react"
 
 const cardData = [
   {
@@ -29,23 +29,37 @@ const ConfigurationCard = ({
   time: string
 }) => {
   return (
-    <Stack>
-      <HStack>
-        <VStack>
-          <Text>
-            <Heading size="md">{title}</Heading>
+    <Box
+      p={4}
+      borderRadius="md"
+      bg="bg.MUTED"
+      border="1px solid"
+      borderColor="border.muted"
+      _hover={{ borderColor: "teal.500", transition: "all 0.2s" }}
+    >
+      <HStack justify="space-between" align="flex-start">
+        <VStack align="flex-start" gap={1} flex={1}>
+          <Heading size="sm" color="fg.DEFAULT">
+            {title}
+          </Heading>
+          <Text fontSize="sm" color="fg.MUTED" lineHeight="1.4">
+            {description}
           </Text>
-          <Text color="fg.muted">{description}</Text>
         </VStack>
-        <Text>{time}</Text>
+        <Badge colorScheme="teal" variant="subtle" fontSize="xs" px={2} py={1}>
+          {time}
+        </Badge>
       </HStack>
-    </Stack>
+    </Box>
   )
 }
 
 const Configuration = () => {
   return (
-    <VStack>
+    <VStack gap={3} align="stretch">
+      <Text fontSize="md" fontWeight="medium" color="fg.DEFAULT" mb={2}>
+        Analysis Configuration
+      </Text>
       {cardData.map((card, index) => (
         <ConfigurationCard key={index} {...card} />
       ))}

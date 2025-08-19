@@ -1,18 +1,3 @@
-const Analytics = () => {
-  return (
-    <div>
-      <Text fontSize={"3xl"} fontWeight={"bolder"}>
-        Dashboard
-      </Text>
-      <Text mb={10} color={"gray.500"}>
-        Overview of your Team performance
-      </Text>
-      <MainContent />
-    </div>
-  )
-}
-
-export default Analytics
 import { MdOndemandVideo } from "react-icons/md"
 
 import { FcSalesPerformance } from "react-icons/fc"
@@ -41,6 +26,22 @@ import {
 import { useEffect, useState } from "react"
 import { CircularLoading } from "@/lib/loading"
 import { TbPlayerPlayFilled } from "react-icons/tb"
+
+const Analytics = () => {
+  return (
+    <div>
+      <Text fontSize={"3xl"} fontWeight={"bolder"}>
+        Dashboard
+      </Text>
+      <Text mb={10} color={"gray.500"}>
+        Overview of your Team performance
+      </Text>
+      <MainContent />
+    </div>
+  )
+}
+
+export default Analytics
 
 // import FfmpegTest from "@/features/post/lib/Files"
 
