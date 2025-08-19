@@ -1,13 +1,14 @@
 // src/components/Sidebar.tsx
 import { Flex, HStack, Icon, Link, Text } from "@chakra-ui/react"
-import { FiHome, FiBarChart2, FiEdit2, FiCalendar } from "react-icons/fi"
+import { FiHome, FiBarChart2, FiCalendar } from "react-icons/fi"
+import { RiFolderUploadLine } from "react-icons/ri"
 import { MdManageAccounts } from "react-icons/md"
 import { useLocation } from "react-router"
 
 const navItems = [
   { label: "Dashboard", icon: FiHome, href: "/" },
   { label: "Analytics", icon: FiBarChart2, href: "/analytics" },
-  { label: "Upload", icon: FiEdit2, href: "/upload" },
+  { label: "Upload", icon: RiFolderUploadLine, href: "/upload" },
   { label: "Highlights", icon: FiCalendar, href: "/highlights" },
   { label: "Settings", icon: MdManageAccounts, href: "/settings" },
 ]
