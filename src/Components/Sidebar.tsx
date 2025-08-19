@@ -1,13 +1,6 @@
 // src/components/Sidebar.tsx
 import { Flex, HStack, Icon, Link, Text } from "@chakra-ui/react"
-import {
-  FiHome,
-  FiBarChart2,
-  FiEdit2,
-  FiUsers,
-  FiKey,
-  FiCalendar,
-} from "react-icons/fi"
+import { FiHome, FiBarChart2, FiEdit2, FiCalendar } from "react-icons/fi"
 import { MdManageAccounts } from "react-icons/md"
 import { useLocation } from "react-router"
 

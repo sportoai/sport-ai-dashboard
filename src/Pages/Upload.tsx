@@ -1,5 +1,4 @@
-import React from "react"
-import { HStack, Stack, VStack, Text, Button } from "@chakra-ui/react"
+import { HStack, VStack, Text, Button } from "@chakra-ui/react"
 import UploadVideo from "@/Features/Upload/Component/FileUpload"
 import TextArea from "@/Features/Upload/Component/TextArea"
 import Configuration from "@/Features/Upload/Component/Configuration"

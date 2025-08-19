@@ -1,4 +1,4 @@
-import { Card, Heading, Stack, Text, VStack, HStack } from "@chakra-ui/react"
+import { Heading, Stack, Text, VStack, HStack } from "@chakra-ui/react"
 
 const cardData = [
   {
@@ -16,10 +16,18 @@ const cardData = [
     description: "Break down match footage and analyze key moments",
     time: "15 min - 7 min",
   },
-];
+]
 
 // Accept props for dynamic rendering
-const ConfigurationCard = ({ title, description, time }: { title: string; description: string; time: string }) => {
+const ConfigurationCard = ({
+  title,
+  description,
+  time,
+}: {
+  title: string
+  description: string
+  time: string
+}) => {
   return (
     <Stack>
       <HStack>
@@ -27,9 +35,7 @@ const ConfigurationCard = ({ title, description, time }: { title: string; descri
           <Text>
             <Heading size="md">{title}</Heading>
           </Text>
-          <Text color="fg.muted">
-            {description}
-          </Text>
+          <Text color="fg.muted">{description}</Text>
         </VStack>
         <Text>{time}</Text>
       </HStack>
@@ -40,12 +46,9 @@ const ConfigurationCard = ({ title, description, time }: { title: string; descri
 const Configuration = () => {
   return (
     <VStack>
-      {
-        cardData.map((card, index) => (
-          
-          <ConfigurationCard key={index} {...card} />
-        ))
-      }
+      {cardData.map((card, index) => (
+        <ConfigurationCard key={index} {...card} />
+      ))}
     </VStack>
   )
 }
