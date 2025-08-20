@@ -43,10 +43,15 @@ const ConfigurationCard = ({
   >
     <HStack justify="space-between" align="flex-start">
       <VStack align="flex-start" gap={1} flex={1}>
-        <Heading size="sm" color="black">
+        <Heading size="sm" color="black" _dark={{ color: "white" }}>
           {card.title}
         </Heading>
-        <Text fontSize="sm" color="black" lineHeight="1.4">
+        <Text
+          fontSize="sm"
+          color="black"
+          lineHeight="1.4"
+          _dark={{ color: "white" }}
+        >
           {card.description}
         </Text>
       </VStack>

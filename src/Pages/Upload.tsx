@@ -95,46 +95,80 @@ const Upload = () => {
           <VStack gap={6}>
             {/* Upload Statistics */}
             <Box
-              bg="white"
-              _dark={{ bg: "primary.800" }}
+              bg={"white"}
+              _dark={{ bg: "black" }}
               borderRadius="lg"
               p={6}
               shadow="md"
               w="full"
             >
               <VStack align="flex-start" gap={4} mb={4}>
-                <Text fontSize="lg" fontWeight="medium" color="fg.DEFAULT">
+                <Text
+                  fontSize="lg"
+                  fontWeight="medium"
+                  color={"black"}
+                  _dark={{ color: "white" }}
+                >
                   Upload Statistics
                 </Text>
               </VStack>
 
               <VStack gap={3} align="stretch">
                 <Flex justify="space-between" align="center">
-                  <Text fontSize="sm" color="fg.MUTED">
+                  <Text
+                    fontSize="sm"
+                    color={"black"}
+                    _dark={{ color: "white" }}
+                  >
                     Total Uploads
                   </Text>
-                  <Text fontSize="sm" fontWeight="medium">
+                  <Text
+                    fontSize="sm"
+                    fontWeight="medium"
+                    _dark={{ color: "white" }}
+                  >
                     47
                   </Text>
                 </Flex>
                 <Flex justify="space-between" align="center">
-                  <Text fontSize="sm" color="fg.MUTED">
+                  <Text
+                    fontSize="sm"
+                    color={"black"}
+                    _dark={{ color: "white" }}
+                  >
                     Data Processed
                   </Text>
-                  <Text fontSize="sm" fontWeight="medium">
+                  <Text
+                    fontSize="sm"
+                    color={"black"}
+                    fontWeight="medium"
+                    _dark={{ color: "white" }}
+                  >
                     156 GB
                   </Text>
                 </Flex>
                 <Flex justify="space-between" align="center">
-                  <Text fontSize="sm" color="fg.MUTED">
+                  <Text
+                    fontSize="sm"
+                    color={"black"}
+                    _dark={{ color: "white" }}
+                  >
                     Analysis Time
                   </Text>
-                  <Text fontSize="sm" fontWeight="medium">
+                  <Text
+                    fontSize="sm"
+                    fontWeight="medium"
+                    _dark={{ color: "white" }}
+                  >
                     23.5 hours
                   </Text>
                 </Flex>
                 <Flex justify="space-between" align="center">
-                  <Text fontSize="sm" color="fg.MUTED">
+                  <Text
+                    fontSize="sm"
+                    color={"black"}
+                    _dark={{ color: "white" }}
+                  >
                     Success Rate
                   </Text>
                   <Badge colorScheme="green" variant="solid">
@@ -147,17 +181,22 @@ const Upload = () => {
             {/* Processing Queue */}
             <Box
               bg="white"
-              _dark={{ bg: "primary.800" }}
+              _dark={{ bg: "black" }}
               borderRadius="lg"
               p={6}
               shadow="md"
               w="full"
             >
               <VStack align="flex-start" gap={1} mb={6}>
-                <Text fontSize="lg" fontWeight="medium" color="fg.DEFAULT">
+                <Text
+                  fontSize="lg"
+                  fontWeight="medium"
+                  color={"black"}
+                  _dark={{ color: "white" }}
+                >
                   Processing Queue
                 </Text>
-                <Text fontSize="sm" color="fg.MUTED">
+                <Text fontSize="sm" color={"black"} _dark={{ color: "white" }}>
                   Track your uploads and analysis progress
                 </Text>
               </VStack>
@@ -171,8 +210,13 @@ const Upload = () => {
                   _dark={{ bg: "whiteAlpha.100" }}
                   border="1px solid"
                   borderColor="border.muted"
+                  color={"black"}
                 >
-                  <Text fontSize="sm" color="fg.MUTED">
+                  <Text
+                    fontSize="sm"
+                    color="fg.MUTED"
+                    _dark={{ color: "white" }}
+                  >
                     No items in queue
                   </Text>
                 </Box>
