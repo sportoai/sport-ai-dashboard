@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react"
 import {
   FaPlay,
-  FaEye,
+  // FaEye,
   FaClock,
   FaShare,
   FaDownload,
