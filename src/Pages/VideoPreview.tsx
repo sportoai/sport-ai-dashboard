@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import {
   Box,
   Card,
@@ -14,8 +14,6 @@ import {
   Container,
   AspectRatio,
   Tabs,
-  Slider,
-  Progress,
 } from "@chakra-ui/react"
 import video from "@/assets/testvideo.mp4"
 import {
@@ -27,11 +25,8 @@ import {
   FaDownload,
   FaShare,
   FaArrowLeft,
-  FaCog,
   FaFastForward,
   FaFastBackward,
-  FaRedo,
-  FaUndo,
   FaEye,
   FaHeart,
   FaComment,
@@ -82,7 +77,7 @@ interface Highlight {
 }
 
 const VideoPreview: React.FC = () => {
-  const location = useLocation()
+  // const location = useLocation()
   const navigate = useNavigate()
   // Hardcoded highlight for preview
   const highlight: Highlight = {
@@ -120,7 +115,7 @@ const VideoPreview: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const togglePlay = () => {
-    setControls(prev => {
+    setControls((prev) => {
       const next = { ...prev, isPlaying: !prev.isPlaying }
       if (videoRef.current) {
         if (next.isPlaying) {
@@ -134,23 +129,23 @@ const VideoPreview: React.FC = () => {
   }
 
   const toggleMute = () => {
-    setControls(prev => ({ ...prev, isMuted: !prev.isMuted }))
+    setControls((prev) => ({ ...prev, isMuted: !prev.isMuted }))
   }
 
-  const handleVolumeChange = (value: number[]) => {
-    setControls(prev => ({ ...prev, volume: value[0], isMuted: value[0] === 0 }))
-  }
+  // const handleVolumeChange = (value: number[]) => {
+  //   setControls(prev => ({ ...prev, volume: value[0], isMuted: value[0] === 0 }))
+  // }
 
   const handleSeek = (value: number[]) => {
-    setControls(prev => ({ ...prev, currentTime: value[0] }))
+    setControls((prev) => ({ ...prev, currentTime: value[0] }))
   }
 
   const toggleFullscreen = () => {
-    setControls(prev => ({ ...prev, isFullscreen: !prev.isFullscreen }))
+    setControls((prev) => ({ ...prev, isFullscreen: !prev.isFullscreen }))
   }
 
   const changePlaybackRate = (rate: number) => {
-    setControls(prev => ({ ...prev, playbackRate: rate }))
+    setControls((prev) => ({ ...prev, playbackRate: rate }))
   }
 
   const formatTime = (seconds: number) => {
@@ -230,7 +225,6 @@ const VideoPreview: React.FC = () => {
                   />
 
                   {/* Play/Pause Button Overlay */}
-                 
 
                   {/* Video Progress Bar */}
                   <Box
@@ -256,9 +250,7 @@ const VideoPreview: React.FC = () => {
                           size="sm"
                           color="white"
                           onClick={() =>
-                            handleSeek([
-                              Math.max(0, controls.currentTime - 10),
-                            ])
+                            handleSeek([Math.max(0, controls.currentTime - 10)])
                           }
                         >
                           <Icon as={FaFastBackward} />
@@ -379,15 +371,12 @@ const VideoPreview: React.FC = () => {
                     <FaDownload />
                     Download
                   </Button>
-                  <Button  colorScheme="blue" flex={1}>
-                    <FaShare/>
+                  <Button colorScheme="blue" flex={1}>
+                    <FaShare />
                     Share
                   </Button>
-                  <Button
-                    variant="outline"
-                    colorScheme="red"
-                  >
-                    <FaHeart/>
+                  <Button variant="outline" colorScheme="red">
+                    <FaHeart />
                     Like
                   </Button>
                 </HStack>
