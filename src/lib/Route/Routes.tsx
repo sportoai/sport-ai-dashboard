@@ -4,6 +4,7 @@ import UploadVideo from "@/Pages/Upload"
 import Analytics from "@/Pages/Analytics"
 import Profile from "@/Pages/Profile"
 import Highlights from "@/Pages/Highlights"
+import VideoPreview from "@/Pages/VideoPreview"
 import Settings from "@/Pages/Settings"
 
 import DashboardLayout from "@/Pages/layout"
@@ -53,6 +54,10 @@ const AppRoutes = () => {
       {layoutRoute({
         path: "/analytics",
         component: <Analytics />,
+      })}
+      {layoutRoute({
+        path: "/video-preview",
+        component: <VideoPreview />,
       })}
     </Routes>
   )

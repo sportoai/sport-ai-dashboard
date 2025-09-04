@@ -1,4 +1,5 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 import {
   Box,
   Card,
@@ -52,6 +53,7 @@ interface Highlight {
 }
 
 const Highlights: React.FC = () => {
+  const navigate = useNavigate()
   const highlights: Highlight[] = [
     {
       id: 1,
@@ -305,7 +307,13 @@ const Highlights: React.FC = () => {
               </Card.Body>
 
               <Card.Footer justifyContent="space-between" p={4} pt={0}>
-                <Button colorScheme="blue" size="sm" flex={1} mr={2}>
+                <Button
+                  colorScheme="blue"
+                  size="sm"
+                  flex={1}
+                  mr={2}
+                  onClick={() => navigate("/video-preview")}
+                >
                   Watch
                 </Button>
                 <HStack gap={2}>
